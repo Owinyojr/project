@@ -1,0 +1,1120 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+   
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title> Tracoagency</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="/static/assets/img/mt-tm-logo-vector-illustration_576809-61.jpg" rel="icon">
+  <link href="/static/assets/img/mt-tm-logo-vector-illustration_576809-61.jpg" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Amatic+SC:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <!-- Vendor CSS Files --><!-- Vendor CSS Files --><!-- Vendor CSS Files -->
+  
+
+  
+  <!-- Vendor CSS Files -->
+  <!-- Vendor CSS Files --><!-- Vendor CSS Files --><!-- Vendor CSS Files -->
+
+    
+  <!-- Vendor CSS Files -->
+  <!-- Vendor CSS Files --><!-- Vendor CSS Files --><!-- Vendor CSS Files -->
+  
+  <link href="/static/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/static/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="/static/assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="/static/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="/static/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="/static/assets/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Yummy
+  * Updated: Sep 18 2023 with Bootstrap v5.3.2
+  * Template URL: https://bootstrapmade.com/yummy-bootstrap-restaurant-website-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto me-lg-0">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="/static/assets/img/logo.png" alt=""> -->
+        <h2>TracoAgency<span></span></h2>
+      </a>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#menu">Services</a></li>
+          <li><a href="#events">Events</a></li>
+          <li><a href="#chefs">Profesionals</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="{% url 'signout' %}">Logout</a></li>
+          <!-- <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+            <ul>
+              <li><a href="#">Drop Down 1</a></li>
+              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a> -->
+                <!-- <ul>
+                  <li><a href="#">Deep Drop Down 1</a></li>
+                  <li><a href="#">Deep Drop Down 2</a></li>
+                  <li><a href="#">Deep Drop Down 3</a></li>
+                  <li><a href="#">Deep Drop Down 4</a></li>
+                  <li><a href="#">Deep Drop Down 5</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Drop Down 2</a></li>
+              <li><a href="#">Drop Down 3</a></li>
+              <li><a href="#">Drop Down 4</a></li>
+            </ul> -->
+          <!-- </li>
+          <li><a href="#contact">Contact</a></li>
+        </ul> -->
+      </nav><!-- .navbar -->
+
+      <a class="btn-book-a-table" href="#book-a-table">Book a Tractor </a>
+      <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+      <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="hero d-flex align-items-center section-bg">
+    <div class="container">
+        {% for msg in messages %}
+        <div class="alert alert-{{msg.level_tag}} alert-dismissible fade show  name" role="alert" >
+        <strong> {{msg.message}}</strong>
+        <button type="button" class="btn-close name1" data-bs-dismiss="alert" aria-label="close"></button>
+        </div>
+
+        {% endfor %}
+      <div class="row justify-content-between gy-5">
+        <div class="col-lg-5 order-2 order-lg-1 d-flex flex-column justify-content-center align-items-center align-items-lg-start text-center text-lg-start">
+          <h2 data-aos="fade-up">Your Reliable <br>Operator</h2>
+          <p data-aos="fade-up" data-aos-delay="100">TracoAgency – your top choice for tractor hire services! Delighted to have you with us. Whether it's robust machinery for agriculture, our top-notch fleet and dedicated team are here for your tractor rental needs. Let's cultivate success together! Cheers to progress!</p>
+          <div class="d-flex" data-aos="fade-up" data-aos-delay="200">
+            <a href="#book-a-table" class="btn-book-a-table">Book a Tractor </a>
+            <a href="https://www.youtube.com/watch?v=OswP-D2-9DY" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>
+          </div>
+        </div>
+        <div class="col-lg-5 order-1 order-lg-2 text-center text-lg-start">
+          <img src="/static/assets/img/18554.jpg" class="img-fluid" alt="" data-aos="zoom-out" data-aos-delay="300" style="border-radius: 50%;">
+        </div>
+      </div>
+    </div>
+  </section><!-- End Hero Section -->
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <h2>About Us</h2>
+          <p>Learn More <span>About Us</span></p>
+        </div>
+
+        <div class="row gy-4">
+          <div class="col-lg-7 position-relative about-img" style="background-image: url(/static/assets/img/marc-noorman-voYUSXMcsyI-unsplash\ \(1\).jpg) ; border-radius: 10px;" data-aos="fade-up" data-aos-delay="150">
+            <div class="call-us position-absolute">
+              <h4>Book a Tractor</h4>
+              <p>+254704358072</p>
+            </div>
+          </div>
+          <div class="col-lg-5 d-flex align-items-end" data-aos="fade-up" data-aos-delay="300">
+            <div class="content ps-0 ps-lg-5">
+              <p class="fst-italic">
+                Welcome to TracoAgency, where we're not just a service provider; we're your dedicated partners in agricultural success. With unwavering reliability, transparent dealings, and a commitment to sustainability, we're here to revolutionize your farming experience.
+              </p>
+              <ul>
+                <li><i class="bi bi-check2-all"></i>We stand committed to delivering dependable and efficient tractor services, ensuring farmers can rely on us for their agricultural needs..</li>
+                <li><i class="bi bi-check2-all"></i>Open communication and transparent transactions are at the heart of our operations, building trust with every interaction. </li>
+                <li><i class="bi bi-check2-all"></i> We believe in promoting sustainable and eco-friendly agriculture, contributing to a greener and more resilient farming future.</li>
+              </ul>
+              <p>
+                With over 3 years of service, our unwavering reliability, transparent dealings, and commitment to sustainability aim to revolutionize your farming experience.
+              </p>
+
+              <div class="position-relative mt-4">
+                <img src="/static/assets/img/hero-img1.jpg"style="border-radius: 10px;" class="img-fluid" alt="">
+                <a href="https://www.youtube.com/watch?v=OswP-D2-9DY" class="glightbox play-btn"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    <!-- ======= Why Us Section ======= -->
+
+    <section id="why-us" class="why-us section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="why-box">
+              <h3>Why Choose TracoAgency?</h3>
+              <p>
+                Choose TracoAgency for a trusted, reliable, and sustainable partner in your agricultural journey. Join us in cultivating a future of prosperity for farmers worldwide..
+              </p>
+              <div class="text-center">
+                <a href="#" class="more-btn">Learn More <i class="bx bx-chevron-right"></i></a>
+              </div>
+            </div>
+          </div><!-- End Why Box -->
+
+          <div class="col-lg-8 d-flex align-items-center">
+            <div class="row gy-4">
+
+              <div class="col-xl-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="icon-box d-flex flex-column justify-content-center align-items-center">
+                  <i class="bi bi-clipboard-data"></i>
+                  <h4>Expertise and Experience</h4>
+                  <p>Benefit from our extensive 3 years of expertise in the agricultural industry. TracoAgency has been a consistent and reliable partner, offering valuable insights and solutions tailored to your needs.</p>
+                </div>
+              </div><!-- End Icon Box -->
+
+              <div class="col-xl-4" data-aos="fade-up" data-aos-delay="300">
+                <div class="icon-box d-flex flex-column justify-content-center align-items-center">
+                  <i class="bi bi-gem"></i>
+                  <h4>Cutting-Edge Technology</h4>
+                  <p>Experience the convenience of our advanced, user-friendly platform. TracoAgency leverages cutting-edge technology to streamline the booking process, making it easy and efficient for farmers to access high-quality tractor services.</p>
+                </div>
+              </div><!-- End Icon Box -->
+
+              <div class="col-xl-4" data-aos="fade-up" data-aos-delay="400">
+                <div class="icon-box d-flex flex-column justify-content-center align-items-center">
+                  <i class="bi bi-inboxes"></i>
+                  <h4>Customer-Centric Approach</h4>
+                  <p>Your satisfaction is our priority. TracoAgency takes a customer-centric approach, ensuring that our services are tailored to meet your unique needs. We're here to support you at every step of your agricultural journey.</p>
+                </div>
+              </div><!-- End Icon Box -->
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Why Us Section -->
+
+    <!-- ======= Stats Counter Section ======= -->
+    <section id="stats-counter" class="stats-counter">
+      <div class="container" data-aos="zoom-out">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item text-center w-100 h-100">
+              <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Clients</p>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item text-center w-100 h-100">
+              <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Projects</p>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item text-center w-100 h-100">
+              <span data-purecounter-start="0" data-purecounter-end="1453" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Hours Of Support</p>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item text-center w-100 h-100">
+              <span data-purecounter-start="0" data-purecounter-end="32" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Workers</p>
+            </div>
+          </div><!-- End Stats Item -->
+
+        </div>
+
+      </div>
+    </section><!-- End Stats Counter Section -->
+
+    <!-- ======= Menu Section ======= -->
+    <section id="menu" class="menu">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <h2>Services</h2>
+          <p>Check OuT <span>Our Services </span></p>
+        </div>
+
+        <ul class="nav nav-tabs d-flex justify-content-center" data-aos="fade-up" data-aos-delay="200">
+
+          <li class="nav-item">
+            <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#menu-starters">
+              <h4>Disc Plough </h4>
+            </a>
+          </li><!-- End tab nav item -->
+
+          <!-- <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#menu-breakfast">
+              <h4>Rotavation </h4> -->
+            </a><!-- End tab nav item -->
+
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#menu-lunch">
+              <h4>Combine Harvesters</h4>
+            </a>
+          </li><!-- End tab nav item -->
+
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#menu-dinner">
+              <h4>Pest Spraying</h4>
+            </a>
+          </li><!-- End tab nav item -->
+
+        </ul>
+
+        <div class="tab-content" data-aos="fade-up" data-aos-delay="300">
+
+          <div class="tab-pane fade active show" id="menu-starters">
+
+            <div class="tab-header text-center">
+              <p>services</p>
+              <h3>Disc Plough</h3>
+            </div>
+
+            <div class="row gy-5">
+
+              <div class="col-lg-4 menu-item">
+                <a href="/static/assets/img/ploughing-heavy-tractor-during-cultivation-agriculture-works-field-with-plough.jpg" class="glightbox"><img src="/static/assets/img/ploughing-heavy-tractor-during-cultivation-agriculture-works-field-with-plough.jpg" style="border-radius: 50%;" class="menu-img img-fluid" alt=""></a>
+                <h4>Disc & Harrow</h4>
+                <p class="ingredients">
+                  4wrd 110Hpw
+                </p>
+                <p class="price">
+                  Ksh 5000 Per Hour
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="/static/assets/img/download.jpeg" class="glightbox"><img src="/static/assets/img/download.jpeg"  style="border-radius: 50%;"class="menu-img img-fluid" alt=""></a>
+                <h4>Disc Plough</h4>
+                <p class="ingredients">
+                  2WL Drive 55Hpw
+                </p>
+                <p class="price">
+                  Ksh 2500 Per Hour
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="/static/assets/img/download (3).jpeg" class="glightbox"><img src="/static/assets/img/download (3).jpeg"  style="border-radius: 50%;"class="menu-img img-fluid" alt=""></a>
+                <h4>Disc Plough</h4>
+                <p class="ingredients">
+                  4wrd Drive 75Hpw
+                </p>
+                <p class="price">
+                  ksh 3500 Per Hour
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="/static/assets/img/download (2).jpeg" class="glightbox"><img src="/static/assets/img/download (2).jpeg" style="border-radius: 50%;" class="menu-img img-fluid" alt=""></a>
+                <h4>Disc Plough</h4>
+                <p class="ingredients">
+                  4wrd Drive 80Hpw
+                </p>
+                <p class="price">
+                  Ksh 3800 Per Hour
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="/static/assets/img/download (5).jpeg" class="glightbox"><img src="/static/assets/img/download (5).jpeg" style="border-radius: 50%;" class="menu-img img-fluid" alt=""></a>
+                <h4>Disc & Harrow Plough</h4>
+                <p class="ingredients">
+                  4wrd Drive 90Hpw
+                </p>
+                <p class="price">
+                  ksh 4500 Per Hour
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="/static/assets/img/download (1).jpeg" class="glightbox"><img src="/static/assets/img/download (1).jpeg" style="border-radius: 50%;" class="menu-img img-fluid" alt=""></a>
+                <h4>Disc Plough</h4>
+                <p class="ingredients">
+                  4wrd Drive 80Hpw
+                </p>
+                <p class="price">
+                  Ksh 4000 per Hour
+                </p>
+              </div><!-- Menu Item -->
+
+            </div>
+          </div><!-- End Starter Menu Content -->
+
+          <!-- <div class="tab-pane fade" id="menu-breakfast">
+
+            <div class="tab-header text-center">
+              <p>services</p>
+              <h3>Rotavation -->
+<!-- 
+              <div class="col-lg-4 menu-item">
+                <a href="/static/assets/img/menu/menu-item-1.png" class="glightbox"><img src="/static/assets/img/menu/menu-item-1.png" class="menu-img img-fluid" alt=""></a>
+                <h4>Magnam Tiste</h4>
+                <p class="ingredients">
+                  Lorem, deren, trataro, filede, nerada
+                </p>
+                <p class="price">
+                  $5.95
+                </p> -->
+              <!-- </div> -->
+              <!-- Menu Item -->
+
+              <!-- <div class="col-lg-4 menu-item">
+                <a href="/static/assets/img/menu/menu-item-2.png" class="glightbox"><img src="/static/assets/img/menu/menu-item-2.png" class="menu-img img-fluid" alt=""></a>
+                <h4>Aut Luia</h4>
+                <p class="ingredients">
+                  Lorem, deren, trataro, filede, nerada
+                </p>
+                <p class="price">
+                  $14.95
+                </p> -->
+              <!-- </div> -->
+              <!-- Menu Item -->
+
+              <!-- <div class="col-lg-4 menu-item">
+                <a href="/static/assets/img/menu/menu-item-3.png" class="glightbox"><img src="/static/assets/img/menu/menu-item-3.png" class="menu-img img-fluid" alt=""></a>
+                <h4>Est Eligendi</h4>
+                <p class="ingredients">
+                  Lorem, deren, trataro, filede, nerada
+                </p>
+                <p class="price">
+                  $8.95 -->
+                <!-- </p>
+              </div> -->
+              <!-- Menu Item -->
+
+              <!-- <div class="col-lg-4 menu-item">
+                <a href="/static/assets/img/menu/menu-item-4.png" class="glightbox"><img src="/static/assets/img/menu/menu-item-4.png" class="menu-img img-fluid" alt=""></a>
+                <h4>Eos Luibusdam</h4>
+                <p class="ingredients">
+                  Lorem, deren, trataro, filede, nerada
+                </p>
+                <p class="price">
+                  $12.95 -->
+                <!-- </p>
+              </div> -->
+              <!-- Menu Item -->
+
+              <!-- <div class="col-lg-4 menu-item">
+                <a href="/static/assets/img/menu/menu-item-5.png" class="glightbox"><img src="/static/assets/img/menu/menu-item-5.png" class="menu-img img-fluid" alt=""></a>
+                <h4>Eos Luibusdam</h4>
+                <p class="ingredients">
+                  Lorem, deren, trataro, filede, nerada
+                </p>
+                <p class="price">
+                  $12.95
+                </p> -->
+              <!-- </div> -->
+              <!-- Menu Item -->
+
+              <!-- <div class="col-lg-4 menu-item">
+                <a href="/static/assets/img/menu/menu-item-6.png" class="glightbox"><img src="/static/assets/img/menu/menu-item-6.png" class="menu-img img-fluid" alt=""></a>
+                <h4>Laboriosam Direva</h4>
+                <p class="ingredients">
+                  Lorem, deren, trataro, filede, nerada
+                </p>
+                <p class="price">
+                  $9.95
+                </p> -->
+              <!-- </div> -->
+              <!-- Menu Item -->
+
+            <!-- </div>
+          </div>End Breakfast Menu Content -->
+
+          <div class="tab-pane fade" id="menu-lunch">
+
+            <div class="tab-header text-center">
+              <p>Services</p>
+              <h3>Combine Harvesters</h3>
+            </div>
+
+            <div class="row gy-5">
+
+              <div class="col-lg-4 menu-item">
+                <a href="/static/assets/img/combine-harvester-cutting-silage-filling-trailer-field-agriculture_559531-6140.jpg" class="glightbox"><img src="/static/assets/img/combine-harvester-cutting-silage-filling-trailer-field-agriculture_559531-6140.jpg" style="border-radius: 50%;" class="menu-img img-fluid" alt=""></a>
+                <h4>New Holland tracks</h4>
+                <p class="ingredients">
+                Combine Harvester / silage filling trailer
+                </p>
+                <p class="price">
+                  KSh 2500 Per hour
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="/static/assets/img/sugarcane-harvester-machine_51195-72.jpg" class="glightbox"><img src="/static/assets/img/sugarcane-harvester-machine_51195-72.jpg"  style="border-radius: 50%;"class="menu-img img-fluid" alt=""></a>
+                <h4>Sugarcane Harvester </h4>
+                <p class="ingredients">
+                  4wrd Drive
+                </p>
+                <p class="price">
+                  KSh 2000 Per hour
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="/static/assets/img/ripe-wheat-cutting-with-heavy-machinery-outdoors-generated-by-ai.jpg" class="glightbox"><img src="/static/assets/img/ripe-wheat-cutting-with-heavy-machinery-outdoors-generated-by-ai.jpg"  style="border-radius: 50%;"class="menu-img img-fluid" alt=""></a>
+                <h4>Rice Wheat Harvester</h4>
+                <p class="ingredients">
+                  4wrd Drive
+                </p>
+                <p class="price">
+                  KSh 2000 per hour
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="/static/assets/img/top-view-tractors-doing-harvest-field.jpg" class="glightbox"><img src="/static/assets/img/top-view-tractors-doing-harvest-field.jpg" style="border-radius: 50%;" class="menu-img img-fluid" alt=""></a>
+                <h4>4wrd Baller</h4>
+                <p class="ingredients">
+                  Hay baller + Trailer
+                </p>
+                <p class="price">
+                  Ksh 4000 Per hour
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="/static/assets/img/stats-bg5.jpg" class="glightbox"><img src="/static/assets/img/stats-bg5.jpg"  style="border-radius: 50%;"class="menu-img img-fluid" alt=""></a>
+                <h4>4wrd Drive</h4>
+                <p class="ingredients">
+                Berries Harvester
+                </p>
+                <p class="price">
+                  Ksh 2500 per hour
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="/static/assets/img/red-harvesting-machine-corn-farm.jpg" class="glightbox"><img src="/static/assets/img/red-harvesting-machine-corn-farm.jpg"  style="border-radius: 50%;"class="menu-img img-fluid" alt=""></a>
+                <h4>4wrd Drive </h4>
+                <p class="ingredients">
+                  Corn Harvester
+                </p>
+                <p class="price">
+                  Ksh 2000 Per hour
+                </p>
+              </div><!-- Menu Item -->
+
+            </div>
+          </div><!-- End Lunch Menu Content -->
+
+          <div class="tab-pane fade" id="menu-dinner">
+
+            <div class="tab-header text-center">
+              <p>Services</p>
+              <h3>Pest Spraying</h3>
+            </div>
+
+            <div class="row gy-5">
+
+              <div class="col-lg-4 menu-item">
+                <a  href="/static/assets/img/spraying-progress-witnessing-tractor-s-impact-field-growth_160152-7449.jpg" class="glightbox"><img src="/static/assets/img/spraying-progress-witnessing-tractor-s-impact-field-growth_160152-7449.jpg" class="menu-img img-fluid" style="border-radius: 50%;"  alt=""></a>
+                <h4>Sunflower Sprayer</h4>
+                <p class="ingredients">
+                  Capacity 10,000L
+                </p>
+                <p class="price">
+                  Ksh 3000 per hour
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="/static/assets/img/robot-spraying-fertilizer-vegetable-garden_35913-3099.jpg" class="glightbox"><img src="/static/assets/img/robot-spraying-fertilizer-vegetable-garden_35913-3099.jpg" style="border-radius: 50%;" class="menu-img img-fluid" alt=""></a>
+                <h4>Autonomous sprayer</h4>
+                <p class="ingredients">
+                  Vegetable Robot Tractor spayer
+                </p>
+                <p class="price">
+                  Ksh 3000 Per Hour
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="/static/assets/img/special-tractor-sprays-fields-from-weeds-spraying-fields-close-up_406634-2138.jpg"   class="glightbox"><img src="/static/assets/img/special-tractor-sprays-fields-from-weeds-spraying-fields-close-up_406634-2138.jpg" style="border-radius: 50%;" class="menu-img img-fluid" alt=""></a>
+                <h4>Plantation Sprayer</h4>
+                <p class="ingredients">
+                  Rice Plantation Sprayer
+                </p>
+                <p class="price">
+                  Ksh 2000 per Hour
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="/static/assets/img/farmer-care-plants-pesticides-spraying-agriculture-fertilizer_723208-5900.jpg" class="glightbox"><img src="/static/assets/img/farmer-care-plants-pesticides-spraying-agriculture-fertilizer_723208-5900.jpg"  style="border-radius: 50%;"class="menu-img img-fluid" alt=""></a>
+                <h4>Sunflower sprayer</h4>
+                <p class="ingredients">
+                  Capacity 8,000L
+                </p>
+                <p class="price">
+                  Ksh 2000 Per Hour
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="/static/assets/img/stats-bg1.jpg" class="glightbox"><img src="/static/assets/img/stats-bg1.jpg"  style="border-radius: 50%;"class="menu-img img-fluid" alt=""></a>
+                <h4>Plantation Sprayer</h4>
+                <p class="ingredients">
+                  Wide Wing
+                </p>
+                <p class="price">
+                  Ksh 2000 Per Hour 
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="/static/assets/img/field-transformation-witnessing-tractor-s-spraying-expertise_160152-7438.jpg" class="glightbox"><img src="/static/assets/img/field-transformation-witnessing-tractor-s-spraying-expertise_160152-7438.jpg"  style="border-radius: 50%;"class="menu-img img-fluid" alt=""></a>
+                <h4>Low crop Sprayer</h4>
+                <p class="ingredients">
+                  Capacity 10,000L
+                </p>
+                <p class="price">
+                  ksh 3000 Per hour
+                </p>
+              </div><!-- Menu Item -->
+
+            </div>
+          </div><!-- End Dinner Menu Content -->
+
+        </div>
+
+      </div>
+    </section><!-- End Menu Section -->
+
+    <!-- ======= Testimonials Section ======= -->
+    <section id="testimonials" class="testimonials section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <h2>Testimonials</h2>
+          <p>What Are They <span>Saying About Us</span></p>
+        </div>
+
+        <div class="slides-1 swiper" data-aos="fade-up" data-aos-delay="100">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <div class="row gy-4 justify-content-center">
+                  <div class="col-lg-6">
+                    <div class="testimonial-content">
+                      <p>
+                        <i class="bi bi-quote quote-icon-left"></i>
+                        TracoAgency has transformed the way we approach farming.
+                        <i class="bi bi-quote quote-icon-right"></i>
+                      </p>
+                      <h3>John Farmer</h3>
+                      <h4>Agricultural investor &amp; Innovator</h4>
+                      <div class="stars">
+                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-2 text-center">
+                    <img src="/static/assets/img/gardener-apron-african-guy-greenhouse-flowers-pot.jpg" class="img-fluid testimonial-img" alt="">
+                  </div>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <div class="row gy-4 justify-content-center">
+                  <div class="col-lg-6">
+                    <div class="testimonial-content">
+                      <p>
+                        <i class="bi bi-quote quote-icon-left"></i>
+                        Reliability and efficiency define TracoAgency's services. A true partner in our success.
+                        <i class="bi bi-quote quote-icon-right"></i>
+                      </p>
+                      <h3>Sarah Green</h3>
+                      <h4>Sustainable Farmer</h4>
+                      <div class="stars">
+                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-2 text-center">
+                    <img src="/static/assets/img/countryside-woman-holding-plant-leaves_23-2148761766.jpg" class="img-fluid testimonial-img" alt="">
+                  </div>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <div class="row gy-4 justify-content-center">
+                  <div class="col-lg-6">
+                    <div class="testimonial-content">
+                      <p>
+                        <i class="bi bi-quote quote-icon-left"></i>
+                        Booking tractor services has never been easier. Thank you, TracoAgency!
+                        <i class="bi bi-quote quote-icon-right"></i>
+                      </p>
+                      <h3>Michael Thompson</h3>
+                      <h4>Crop Specialist</h4>
+                      <div class="stars">
+                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-2 text-center">
+                    <img src="/static/assets/img/farmer-standing-with-digital-tablet-wheat-field-using-modern-technologies-agriculture_93675-117293.jpg" class="img-fluid testimonial-img" alt="">
+                  </div>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <div class="row gy-4 justify-content-center">
+                  <div class="col-lg-6">
+                    <div class="testimonial-content">
+                      <p>
+                        <i class="bi bi-quote quote-icon-left"></i>
+                        TracoAgency's commitment to transparency sets them apart in the industry.
+                        <i class="bi bi-quote quote-icon-right"></i>
+                      </p>
+                      <h3>Dr. Emily Turner</h3>
+                      <h4>Agricultural Consultant</h4>
+                      <div class="stars">
+                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-2 text-center">
+                    <img src="/static/assets/img/full-shot-smiley-woman-holding-tablet.jpg" class="img-fluid testimonial-img" alt="">
+                  </div>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+    </section><!-- End Testimonials Section -->
+
+    <!-- ======= Events Section ======= -->
+    <section id="events" class="events">
+      <div class="container-fluid" data-aos="fade-up">
+
+        <div class="section-header">
+          <h2>Events</h2>
+          <p>Have<span>A Fill </span> In Our Establishment</p>
+        </div>
+
+        <div class="slides-3 swiper" data-aos="fade-up" data-aos-delay="100">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide event-item d-flex flex-column justify-content-end" style="background-image: url(/static/assets/img/close-up-seeder-attached-tractor-field.jpg)">
+              <h3>Tractor Technology Showcase</h3>
+              <div class="price align-self-start">Charges free</div>
+              <p class="description">
+                Join us for an exclusive event where we unveil the latest advancements in tractor technology. Explore cutting-edge features and innovations designed to enhance your farming operations. Get hands-on experience and insights from industry experts to stay at the forefront of agricultural efficiency.
+              </p>
+            </div><!-- End Event item -->
+
+            <div class="swiper-slide event-item d-flex flex-column justify-content-end" style="background-image: url(/static/assets/img/shane-rounce-DNkoNXQti3c-unsplash.jpg)">
+              <h3>Sustainability Symposium</h3>
+              <div class="price align-self-start"> Charges free</div>
+              <p class="description">
+                TracoAgency is committed to sustainable agriculture. Attend our Sustainability Symposium to engage in discussions with experts, farmers, and environmental advocates. Discover practical approaches to eco-friendly farming, learn about our sustainability initiatives, and explore how you can contribute to a greener future for agriculture.
+              </p>
+            </div><!-- End Event item -->
+
+            <div class="swiper-slide event-item d-flex flex-column justify-content-end" style="background-image: url(/static/assets/img/side-view-women-shaking-hands_23-2149894715.jpg)">
+              <h3> Farmers Appreciation Day</h3>
+              <div class="price align-self-start">Charges free</div>
+              <p class="description">
+               In celebration of the hardworking farmers who make agriculture thrive, TracoAgency hosts a Farmers Appreciation Day. Join us for a day filled with fun, educational activities, and a chance to connect with fellow farmers. Showcasing appreciation through workshops, giveaways, and networking, it's our way of saying thank you to the backbone of our communities
+              </p>
+            </div><!-- End Event item -->
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+    </section><!-- End Events Section -->
+
+    <!-- ======= Chefs Section ======= -->
+    <section id="chefs" class="chefs section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <h2>Profesional</h2>
+          <p>Our <span>Profesionals</span></p>
+        </div>
+
+        <div class="row gy-4">
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+            <div class="chef-member">
+              <div class="member-img">
+                <img src="/static/assets/img/man-sitting-taking-care-barbecue_23-2148733598.jpg" class="img-fluid" alt="">
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>Major Michael</h4>
+                <span>Precision Plowing Specialist</span>
+                <p>Michael brings a wealth of experience and precision to the field. As our Precision Plowing Specialist, she ensures that each pass is optimized for maximum efficiency. With a keen eye for detail and a commitment to excellence, Michael is dedicated to enhancing the productivity of every farming operation he's involved in.
+
+.</p>
+              </div>
+            </div>
+          </div><!-- End Chefs Member -->
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+            <div class="chef-member">
+              <div class="member-img">
+                <img src="/static/assets/img/woman-holding-tablet-full-shot_23-2149894722.jpg" class="img-fluid" alt="">
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>Tatiana Savimbi</h4>
+                <span>Sustainable Cultivation Expert</span>
+                <p>Tatiana is our go-to expert for sustainable cultivation practices. With a background in agronomy and a passion for eco-friendly farming, she guides farmers in adopting practices that prioritize both productivity and environmental responsibility. Tatiana is committed to helping our clients achieve long-term success while minimizing their ecological footprint.</p>
+              </div>
+            </div>
+          </div><!-- End Chefs Member -->
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
+            <div class="chef-member">
+              <div class="member-img">
+                <img src="/static/assets/img/medium-shot-man-holding-walkie-talkie_23-2149557262.jpg" class="img-fluid" alt="">
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>Dr. James Turner</h4>
+                <span>Agricultural Technology Consultant
+</span>
+                <p>As our Agricultural Technology Consultant, Dr. Turner is at the forefront of integrating technology into farming practices. With a Ph.D. in Agricultural Engineering, he advises on the latest advancements in tractor technology, helping farmers leverage innovation for increased efficiency. Dr. Turner is dedicated to ensuring that our clients stay ahead in the rapidly evolving landscape of agricultural technology.</p>
+              </div>
+            </div>
+          </div><!-- End Chefs Member -->
+
+        </div>
+
+      </div>
+    </section><!-- End Chefs Section -->
+
+    <!-- ======= Book A Table Section ======= -->
+    <section id="book-a-table" class="book-a-table">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <h2>Book A Tractor </h2>
+          <p>Book <span>Quality</span> Service</p>
+        </div>
+
+        <div class="row g-0">
+
+          <div class="col-lg-4 reservation-img" style="background-image: url(/static/assets/img/african-worker-driving-heavy-construction-equipment-backhoe-with-smile-happy_73622-1820.jpg);" data-aos="zoom-out" data-aos-delay="200"></div>
+
+          <div class="col-lg-8 d-flex align-items-center reservation-form-bg">
+            <form action="{% url 'trackbook' %}" method="POST" role="form" class="php-email-form" data-aos="fade-up" data-aos-delay="100">
+                {% csrf_token %}
+              <div class="row gy-4">
+                <div class="col-lg-4 col-md-6">
+                  <input type="text" name="name" class="form-control" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+                  <div class="validate"></div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                  <input type="email" class="form-control" name="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email">
+                  <div class="validate"></div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                  <input type="text" class="form-control" name="phone" placeholder="Your Phone" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+                  <div class="validate"></div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                  <input type="text" name="date" class="form-control" placeholder="Date" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+                  <div class="validate"></div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                  <input type="text" class="form-control" name="time" placeholder="Time" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+                  <div class="validate"></div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                  <input type="number" class="form-control" name="people" placeholder="# farm size in ha " data-rule="minlen:1" data-msg="Please enter at least 1 chars">
+                  <div class="validate"></div>
+                </div>
+              </div>
+              <div class="form-group mt-3">
+                <textarea class="form-control" name="message" rows="5" placeholder=" Describe nature of the farm "></textarea>
+                <div class="validate"></div>
+              </div>
+              <div class="mb-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your booking request was sent. We will call back or send an Email to confirm your booking. Thank you!</div>
+              </div>
+              <div class="text-center"><button type="submit">Book a Tractor</button></div>
+            </form>
+          </div><!-- End Reservation Form -->
+
+        </div>
+
+      </div>
+    </section><!-- End Book A Table Section -->
+
+    <!-- ======= Gallery Section ======= -->
+    <section id="gallery" class="gallery section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <h2>gallery</h2>
+          <p>Check <span>Our Gallery</span></p>
+        </div>
+
+        <div class="gallery-slider swiper">
+          <div class="swiper-wrapper align-items-center">
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="/static/assets/img/delicious-roasted-corn-arrangement_23-2149891218.jpg"><img src="/static/assets/img/delicious-roasted-corn-arrangement_23-2149891218.jpg" class="img-fluid" alt=""></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="/static/assets/img/ploughing-heavy-tractor-during-cultivation-agriculture-works-field-with-plough.jpg" style="border-radius: 100px;">
+              <img src="/static/assets/img/ploughing-heavy-tractor-during-cultivation-agriculture-works-field-with-plough.jpg" class="img-fluid" alt=""></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="/static/assets/img/agricultural-plow-close-up-ground-agricultural-machinery_99004-233.jpg"><img src="/static/assets/img/agricultural-plow-close-up-ground-agricultural-machinery_99004-233.jpg" class="img-fluid" alt=""></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" 
+              
+              href="/static/assets/img/agricultural-plow-close-up-ground-agricultural-machinery_99004-231.jpg"><img src="/static/assets/img/agricultural-plow-close-up-ground-agricultural-machinery_99004-231.jpg" class="img-fluid" alt=""></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="/static/assets/img/farm-combine-harvester-large-agricultural-field-during-covid-19-pandemic_181624-49945.jpg"><img src="/static/assets/img/farm-combine-harvester-large-agricultural-field-during-covid-19-pandemic_181624-49945.jpg" class="img-fluid" alt=""></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="/static/assets/img/67050.jpg"><img src="/static/assets/img/67050.jpg" class="img-fluid" alt=""></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="/static/assets/img/14018.jpg"><img src="/static/assets/img/14018.jpg" class="img-fluid" alt=""></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="/static/assets/img/hero-img1.jpg"><img src="/static/assets/img/hero-img1.jpg" class="img-fluid" alt=""></a></div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+    </section><!-- End Gallery Section -->
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <h2>Contact</h2>
+          <p>Need Help? <span>Contact Us</span></p>
+        </div>
+
+        <div class="mb-3">
+           <iframe style="border:0; width: 100%; height: 350px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d997.4500348553748!2d34.91746753623987!3d-0.1729693616687087!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182a9691f0760f25%3A0x7ae7040e717533da!2sJANAM%20HARDWARE%20%26%20GLASS%20MART!5e0!3m2!1sen!2ske!4v1700575447045!5m2!1sen!2ske" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"> allowfullscreen></iframe> 
+           
+
+          <!-- <iframe style="border:0; width: 100%; height: 350px;" src="hhttps://www.google.com/maps/@-0.1722461,34.9183675,17z?entry=ttu" frameborder="0" allowfullscreen></iframe> -->
+
+
+        </div><!-- End Google Maps -->
+
+        <div class="row gy-4">
+
+          <div class="col-md-6">
+            <div class="info-item  d-flex align-items-center">
+              <i class="icon bi bi-map flex-shrink-0"></i>
+              <div>
+                <h3>Our Address</h3>
+                <p>4 0101 Arizona street Nyando/Muhoroni ;Kisumu</p>
+              </div>
+            </div>
+          </div><!-- End Info Item -->
+
+          <div class="col-md-6">
+            <div class="info-item d-flex align-items-center">
+              <i class="icon bi bi-envelope flex-shrink-0"></i>
+              <div>
+                <h3>Email Us</h3>
+                <p>tracoagency@gmail.com</p>
+              </div>
+            </div>
+          </div><!-- End Info Item -->
+
+          <div class="col-md-6">
+            <div class="info-item  d-flex align-items-center">
+              <i class="icon bi bi-telephone flex-shrink-0"></i>
+              <div>
+                <h3>Call Us</h3>
+                <p>+254704358072</p>
+              </div>
+            </div>
+          </div><!-- End Info Item -->
+
+          <div class="col-md-6">
+            <div class="info-item  d-flex align-items-center" style="border-radius: 10px;">
+              <i class="icon bi bi-share flex-shrink-0"></i>
+              <div>
+                <h3>Opening Hours</h3>
+                <div><strong>Mon-Sat:</strong> 6AM - 6PM;
+                  <strong>Sunday:</strong> Closed
+                </div>
+              </div>
+            </div>
+          </div><!-- End Info Item -->
+
+        </div>
+        
+        <form action="/" method="POST" role="form" class="php-email-form p-3 p-md-4">
+            {% csrf_token %}
+          <div class="row">
+            <div class="col-xl-6 form-group">
+              <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+            </div>
+            <div class="col-xl-6 form-group">
+              <input type="email" class="form-control" name="email" placeholder="Your Email" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" name="subject" placeholder="Subject" required>
+          </div>
+          <div class="form-group">
+            <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+          </div>
+          <div class="my-3">
+            <div class="loading">Loading</div>
+            <div class="error-message"></div>
+            <div class="sent-message">Your message has been sent. Thank you!</div>
+          </div>
+          <div class="text-center"><button type="submit">Send Message</button></div>
+        </form><!--End Contact Form -->
+
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+
+    <div class="container">
+      <div class="row gy-3">
+        <div class="col-lg-3 col-md-6 d-flex">
+          <i class="bi bi-geo-alt icon"></i>
+          <div>
+            <h4>Address</h4>
+            <p>
+              4 0101 Arizona street<br>
+              Nyando/Muhoroni ; County: Kisumu<br>
+            </p>
+          </div>
+
+        </div>
+
+        <div class="col-lg-3 col-md-6 footer-links d-flex">
+          <i class="bi bi-telephone icon"></i>
+          <div>
+            <h4>Bookings</h4>
+            <p>
+              <strong>Phone:</strong> +254704358072<br>
+              <strong>Email:</strong> tracoagency@gmail.com<br>
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 footer-links d-flex">
+          <i class="bi bi-clock icon"></i>
+          <div>
+            <h4>Opening Hours</h4>
+            <p>
+              <strong>Mon-Sat: 6AM</strong> - 6PM<br>
+              Sunday: Closed
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 footer-links">
+          <h4>Follow Us</h4>
+          <div class="social-links d-flex">
+            <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+            <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Tracoagency</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/yummy-bootstrap-restaurant-website-template/ -->
+        Designed by <a href="https://bootstrapmade.com/">Son of a woman</a>
+      </div>
+    </div>
+
+  </footer><!-- End Footer -->
+  <!-- End Footer -->
+
+  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="/static/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="/static/assets/vendor/aos/aos.js"></script>
+  <script src="/static/assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="/static/assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="/static/assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <!-- <script src="/static/assets/vendor/php-email-form/validate.js"></script> -->
+
+  <!-- Template Main JS File -->
+  <script src="/static/assets/js/main.js"></script>
+
+</body>
+
+</html>

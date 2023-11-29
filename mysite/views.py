@@ -101,3 +101,13 @@ def signout(request):
     logout(request)
     messages.warning(request,'You have been logged out')
     return redirect('signin')
+
+
+
+
+def adminpage(request):
+    data=Book.objects.all()
+    context={
+        'datas':data
+    }
+    return render(request,'admin.html',context)

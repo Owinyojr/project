@@ -50,7 +50,53 @@
 </head>
 
 <body>
-    <h1>admin</h1>
-</body>
 
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <a href="{% url 'index' %}" class="logo d-flex align-items-center me-auto me-lg-0">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="/static/assets/img/logo.png" alt=""> -->
+        <h2>TracoAgency<span></span></h2>
+      </a>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a href="{% url 'signout' %}">Logout</a></li>
+
+          </ul>
+          </nav>
+    </div>
+  </header>
+
+
+  <section id="hero" class="hero d-flex align-items-center section-bg">
+<div class="container">
+  <h1 style="text-align: center;">Customer  Tractor Bookings</h1> 
+  <table class="table table-bordered">
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Phone</th>
+      <th>Date</th>
+      <th>Time</th>
+      <th>FarmSize</th>
+      <th>Message</th>
+    </tr>
+    {% for data in datas %}
+    <tr>
+      <td>{{data.name}}</td>
+      <td>{{data.email}}</td>
+      <td>{{data.phone}}</td>
+      <td>{{data.date}}</td>
+      <td>{{data.time}}</td>
+      <td>{{data.farmsize}}</td>
+      <td>{{data.message}}</td>
+    </tr>
+    {% endfor %}
+  </table>
+</div>
+  </section>
+</body>
 </html>
